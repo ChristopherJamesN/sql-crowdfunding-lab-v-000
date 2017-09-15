@@ -39,7 +39,7 @@ FROM pledges
 INNER JOIN users
 ON users.id = pledges.user_id
 GROUP BY name
-ORDER BY amount, name;"
+ORDER BY SUM(pledges.amount), name;"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
