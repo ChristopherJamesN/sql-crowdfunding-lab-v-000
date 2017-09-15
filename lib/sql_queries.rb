@@ -31,8 +31,7 @@ WHERE projects.funding_goal > SUM(pledges.amount)
 INNER JOIN pledges
 ON projects.id = pledges.project_id
 GROUP BY title
-ORDER BY title
-;"
+ORDER BY title;"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
