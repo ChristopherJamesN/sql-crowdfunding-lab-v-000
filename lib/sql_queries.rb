@@ -30,7 +30,6 @@ FROM projects
 INNER JOIN pledges
 ON projects.id = pledges.project_id
 GROUP BY title
-ORDER BY title
 HAVING SUM(amount) > funding_goal;"
 end
 
